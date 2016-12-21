@@ -1,6 +1,6 @@
-# my-project
+# Kana Time
 
-> A Vue.js project
+> Massively WIP - currently able to add as an unpacked Chrome extension while in [developer mode](https://developer.chrome.com/extensions/faq#faq-dev-01).
 
 ## Build Setup
 
@@ -8,11 +8,6 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
 # build for production with minification
 npm run build
 ```
-
-For more information see the [docs for vueify](https://github.com/vuejs/vueify).

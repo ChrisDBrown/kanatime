@@ -8,18 +8,13 @@
 </template>
 
 <script>
-import baseData from './hiragana.json'
+import kanaMap from './hiragana.json'
 
 export default {
   name: 'app',
-  data () {
-    return  {
-      kana: baseData
-    }
-  },
   computed: {
     randomKana: function() {
-      return this.kana[Math.floor(Math.random()*this.kana.length)]
+      return kanaMap[Math.floor(Math.random() * kanaMap.length)]
     }
   },
   methods: {

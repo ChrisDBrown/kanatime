@@ -1,0 +1,415 @@
+[{
+  "hiragana": "あ",
+  "romanji": "a",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "い",
+  "romanji": "i",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "う",
+  "romanji": "u",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "え",
+  "romanji": "e",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "お",
+  "romanji": "o",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "か",
+  "romanji": "ka",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "き",
+  "romanji": "ki",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "く",
+  "romanji": "ku",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "け",
+  "romanji": "ke",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "こ",
+  "romanji": "ko",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "さ",
+  "romanji": "sa",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "し",
+  "romanji": "shi",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "す",
+  "romanji": "su",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "せ",
+  "romanji": "se",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "そ",
+  "romanji": "so",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "た",
+  "romanji": "ta",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ち",
+  "romanji": "chi",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "つ",
+  "romanji": "tsu",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "て",
+  "romanji": "te",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "と",
+  "romanji": "to",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "な",
+  "romanji": "na",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "に",
+  "romanji": "ni",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ぬ",
+  "romanji": "nu",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ね",
+  "romanji": "ne",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "の",
+  "romanji": "no",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "は",
+  "romanji": "ha",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ひ",
+  "romanji": "hi",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ふ",
+  "romanji": "fu",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "へ",
+  "romanji": "he",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ほ",
+  "romanji": "ho",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ま",
+  "romanji": "ma",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "み",
+  "romanji": "mi",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "む",
+  "romanji": "mu",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "め",
+  "romanji": "me",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "も",
+  "romanji": "mo",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "や",
+  "romanji": "ya",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ゆ",
+  "romanji": "yu",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "よ",
+  "romanji": "yo",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ら",
+  "romanji": "ra",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "り",
+  "romanji": "ri",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "る",
+  "romanji": "ru",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "れ",
+  "romanji": "re",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ろ",
+  "romanji": "ro",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "わ",
+  "romanji": "wa",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "を",
+  "romanji": "wo",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}, {
+  "hiragana": "ん",
+  "romanji": "n",
+  "results": {
+    "success": 0,
+    "failure": 0,
+    "skipped": 0,
+    "shown": 0
+  }
+}]

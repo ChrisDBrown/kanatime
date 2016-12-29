@@ -8,27 +8,17 @@
 </template>
 
 <script>
-import kanaMap from './hiragana.json'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'app',
   computed: {
-    randomKana: function () {
-      return kanaMap[Math.floor(Math.random() * kanaMap.length)]
-    }
+    ...mapGetters(['randomKana'])
   },
   methods: {
     submitGuess: function (correct, $event) {
-      if (correct === $event.target.value) {
-        window.alert('Correct!')
-      } else {
-        window.alert('Incorrect')
-      }
+      window.alert(correct === $event.target.value)
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -1,7 +1,13 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './components/App.vue'
+import store from './store/'
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  store,
+  components: { App },
+  render: h => h(App),
+  beforeCreate: function () {
+    store.dispatch('setCurrentKana')
+  }
 })

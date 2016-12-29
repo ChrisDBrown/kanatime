@@ -3,7 +3,14 @@ import Vuex from 'vuex'
 import * as actions from './actions'
 import * as getters from './getters'
 import mutations from './mutations'
-import db from './db'
+import baseDb from './db'
+
+let db = {}
+if (window.localStorage.getItem('db')) {
+  db = JSON.parse(window.localStorage.getItem('db'))
+} else {
+  db = baseDb
+}
 
 Vue.use(Vuex)
 
@@ -12,7 +19,7 @@ export default new Vuex.Store({
     db,
     volatile: {
       currentKana: false,
-      hasGuessed: false
+      hasAnswered: false
     }
   },
   getters,

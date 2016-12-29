@@ -2,7 +2,8 @@
   <div id="app">
     <div class="card">
       <h2>{{ randomKana.hiragana }}</h2>
-      <input type="text" name="romanji" v-on:keyup.enter="submitGuess(randomKana.romanji, $event)">
+      <input type="text" name="romanji" v-if="!hasAnswered" v-on:keyup.enter="submitAnswer($event)">
+      <p v-if="hasAnswered">{{ randomKana }}</p>
     </div>
   </div>
 </template>
@@ -13,11 +14,11 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'app',
   computed: {
-    ...mapGetters(['randomKana'])
+    ...mapGetters(['randomKana', 'hasAnswered'])
   },
   methods: {
-    submitGuess: function (correct, $event) {
-      window.alert(correct === $event.target.value)
+    submitAnswer: function ($event) {
+      this.$store.dispatch('submitAnswer', $event.target.value)
     }
   }
 }

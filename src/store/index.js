@@ -12,6 +12,8 @@ if (window.localStorage.getItem('db')) {
   db = baseDb
 }
 
+const debug = process.env.NODE_ENV !== 'production'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -25,5 +27,6 @@ export default new Vuex.Store({
   },
   getters,
   mutations,
-  actions
+  actions,
+  strict: debug
 })

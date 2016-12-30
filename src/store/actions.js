@@ -9,7 +9,7 @@ export const setCurrentKana = ({ commit, state }) => {
 
 export const submitAnswer = ({ commit, state }, answer) => {
   if (!state.volatile.hasAnswered) {
-    if (answer === state.volatile.currentKana.romanji) {
+    if (answer.toLowerCase() === state.volatile.currentKana.romanji) {
       commit(types.INCREMENT_KANA_SUCCESS_COUNT, state.volatile.currentKana)
       commit(types.USER_ANSWERED_CORRECTLY)
     } else {

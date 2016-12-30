@@ -11,6 +11,12 @@ const mutations = {
   [types.USER_HAS_ANSWERED] (state) {
     state.volatile.hasAnswered = true
   },
+  [types.USER_ANSWERED_CORRECTLY] (state) {
+    state.volatile.answeredCorrectly = true
+  },
+  [types.USER_ANSWERED_INCORRECTLY] (state) {
+    state.volatile.answeredCorrectly = false
+  },
   [types.INCREMENT_KANA_SHOWN_COUNT] (state, kana) {
     const index = state.db.findIndex(matchingHiragana, kana)
     state.db[index].results.shown++

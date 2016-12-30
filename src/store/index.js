@@ -19,7 +19,8 @@ export default new Vuex.Store({
     db,
     volatile: {
       currentKana: false,
-      hasAnswered: false
+      hasAnswered: false,
+      answeredCorrectly: false
     }
   },
   getters,

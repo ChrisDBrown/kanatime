@@ -11,8 +11,10 @@ export const submitAnswer = ({ commit, state }, answer) => {
   if (!state.volatile.hasAnswered) {
     if (answer === state.volatile.currentKana.romanji) {
       commit(types.INCREMENT_KANA_SUCCESS_COUNT, state.volatile.currentKana)
+      commit(types.USER_ANSWERED_CORRECTLY)
     } else {
       commit(types.INCREMENT_KANA_FAILURE_COUNT, state.volatile.currentKana)
+      commit(types.USER_ANSWERED_INCORRECTLY)
     }
     commit(types.DECREMENT_KANA_SKIPPED_COUNT, state.volatile.currentKana)
     commit(types.USER_HAS_ANSWERED)

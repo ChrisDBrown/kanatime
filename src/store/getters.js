@@ -5,3 +5,7 @@ export const randomKana = state => {
 export const hasAnswered = state => {
   return state.volatile.hasAnswered
 }
+
+export const answeredCorrectly = state => {
+  return state.volatile.answeredCorrectly
+}

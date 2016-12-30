@@ -1,40 +1,26 @@
 <template>
   <div id="app">
     <div class="card">
-      <div class="mark">
-        <h3 class="tick" v-if="hasAnswered && answeredCorrectly">✓</h3>
-        <h3 class="cross" v-if="hasAnswered && !answeredCorrectly">✗</h3>
-      </div>
+      <currentAnswerResult></currentAnswerResult>
       <h2 class="kana">{{ randomKana.kana }}</h2>
       <h3 class="romanji">
         <span v-if="hasAnswered">{{ randomKana.romanji }}</span>
       </h3>
-      <input class="answer" type="text" placeholder="Answer" v-if="!hasAnswered" v-on:keyup.enter="submitAnswer($event)">
-      <div class="results" v-if="hasAnswered">
-        <div class="score">
-          <span class="score-title">Success</span>
-          <span class="score-value">{{ randomKanaResults.success }}</span>
-        </div>
-        <div class="score">
-          <span class="score-title">Failure</span>
-          <span class="score-value">{{ randomKanaResults.failure }}</span>
-        </div>
-        <div class="score">
-          <span class="score-title">Skipped</span>
-          <span class="score-value">{{ randomKanaResults.skipped }}</span>
-        </div>
-      </div>
+      <input class="answer" type="text" placeholder="Answer" tabindex="1" v-if="!hasAnswered" v-on:keyup.enter="submitAnswer($event)">
+      <historicKanaResults></historicKanaResults>
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import HistoricKanaResults from './HistoricKanaResults.vue'
+import CurrentAnswerResult from './CurrentAnswerResult.vue'
 
 export default {
-  name: 'app',
+  components: { HistoricKanaResults, CurrentAnswerResult },
   computed: {
-    ...mapGetters(['randomKana', 'randomKanaResults', 'hasAnswered', 'answeredCorrectly'])
+    ...mapGetters(['randomKana', 'hasAnswered', 'answeredCorrectly'])
   },
   methods: {
     submitAnswer: function ($event) {
@@ -44,7 +30,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .card {
     display: flex;
     flex-direction: column;
@@ -55,27 +41,6 @@ export default {
     width: 300px;
     min-height: 300px;
     background-color: #5BC0BE;
-  }
-
-  .mark {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 0 5px 0;
-    margin: 0;
-    color: white;
-    font-size: 50px;
-    font-weight: 100;
-    height: 50px;
-  }
-
-  .tick {
-    color: #6FFFE9;
-  }
-
-  .cross {
-    color: #D7263D;
   }
 
   .kana {
@@ -113,32 +78,6 @@ export default {
     border: none;
     background-color: #EEF3F5;
     height: 70px;
-  }
-
-  .results {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    color: #57727C;
-    font-size: 30px;
-    font-weight: 500;
-    padding: 5px;
-    border: none;
-    background-color: #EEF3F5;
-    height: 70px;
-  }
-
-  .score {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    padding: 5px;
-  }
-
-  .score-title {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
   }
 
   .retry {

@@ -5,7 +5,7 @@
         <h3 class="tick" v-if="hasAnswered && answeredCorrectly">✓</h3>
         <h3 class="cross" v-if="hasAnswered && !answeredCorrectly">✗</h3>
       </div>
-      <h2 class="hiragana">{{ randomKana.hiragana }}</h2>
+      <h2 class="kana">{{ randomKana.kana }}</h2>
       <h3 class="romanji">
         <span v-if="hasAnswered">{{ randomKana.romanji }}</span>
       </h3>
@@ -13,15 +13,15 @@
       <div class="results" v-if="hasAnswered">
         <div class="score">
           <span class="score-title">Success</span>
-          <span class="score-value">{{ randomKana.results.success }}</span>
+          <span class="score-value">{{ randomKanaResults.success }}</span>
         </div>
         <div class="score">
           <span class="score-title">Failure</span>
-          <span class="score-value">{{ randomKana.results.failure }}</span>
+          <span class="score-value">{{ randomKanaResults.failure }}</span>
         </div>
         <div class="score">
           <span class="score-title">Skipped</span>
-          <span class="score-value">{{ randomKana.results.skipped }}</span>
+          <span class="score-value">{{ randomKanaResults.skipped }}</span>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'app',
   computed: {
-    ...mapGetters(['randomKana', 'hasAnswered', 'answeredCorrectly'])
+    ...mapGetters(['randomKana', 'randomKanaResults', 'hasAnswered', 'answeredCorrectly'])
   },
   methods: {
     submitAnswer: function ($event) {
@@ -78,7 +78,7 @@ export default {
     color: #D7263D;
   }
 
-  .hiragana {
+  .kana {
     display: flex;
     flex-direction: column;
     justify-content: center;

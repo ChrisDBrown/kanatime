@@ -1,10 +1,10 @@
 {
   "name": "Kana Time",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "A quick kana quiz on every new tab.",
   "icons": {
-    "128": "src/icons/icon128.png"
+    "128": "src/assets/icon128.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"

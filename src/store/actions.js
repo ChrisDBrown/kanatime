@@ -1,7 +1,7 @@
 import * as types from './mutation_types'
 
 export const setCurrentKana = ({ commit, state }) => {
-  const kana = state.db[Math.floor(Math.random() * state.db.length)]
+  const kana = state.kanadb[Math.floor(Math.random() * state.kanadb.length)]
   commit(types.SET_CURRENT_RANDOM_KANA, kana)
   commit(types.INCREMENT_KANA_SHOWN_COUNT, kana)
   commit(types.INCREMENT_KANA_SKIPPED_COUNT, kana)
@@ -18,6 +18,5 @@ export const submitAnswer = ({ commit, state }, answer) => {
     }
     commit(types.DECREMENT_KANA_SKIPPED_COUNT, state.volatile.currentKana)
     commit(types.USER_HAS_ANSWERED)
-    window.localStorage.setItem('db', JSON.stringify(state.db))
   }
 }

@@ -4,11 +4,11 @@
   "author": "Chris D Brown <owner@chrisdbrown.co.uk>",
   "private": true,
   "scripts": {
-    "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
-    "serve": "http-server -o -s -c 1 -a localhost",
+    "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/compiled/build.js",
+    "serve": "http-server ./dist -o -s -c 1 -a localhost",
     "dev": "npm-run-all --parallel watchify serve",
     "lint": "eslint --ext .js,.vue src",
-    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js"
+    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/compiled/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/compiled/build.js"
   },
   "dependencies": {
     "vue": "^2.0.1",

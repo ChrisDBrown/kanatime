@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './components/App.vue'
 import store from './store/'
+import { mapGetters } from 'vuex'
 
 new Vue({
   el: '#app',
@@ -9,5 +10,18 @@ new Vue({
   render: h => h(App),
   beforeCreate: function () {
     store.dispatch('setCurrentKana')
+  },
+  mounted: function () {
+    window.onbeforeunload = this.leaving
+  },
+  computed: {
+    ...mapGetters(['hasAnswered'])
+  },
+  methods: {
+    leaving: function () {
+      if (!this.hasAnswered) {
+        return 'Enter an answer'
+      }
+    }
   }
 })

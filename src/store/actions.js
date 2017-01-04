@@ -1,7 +1,10 @@
 import * as types from './mutation_types'
 
 export const setCurrentKana = ({ commit, state }) => {
-  const kana = state.kanadb[Math.floor(Math.random() * state.kanadb.length)]
+  let kana = state.kanadb[Math.floor(Math.random() * state.kanadb.length)]
+  while (!state.options.activeKanaTypes.includes(kana.type)) {
+    kana = state.kanadb[Math.floor(Math.random() * state.kanadb.length)]
+  }
   commit(types.SET_CURRENT_RANDOM_KANA, kana)
   commit(types.INCREMENT_KANA_SHOWN_COUNT, kana)
   commit(types.INCREMENT_KANA_SKIPPED_COUNT, kana)

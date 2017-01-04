@@ -14,6 +14,10 @@ export const answeredCorrectly = state => {
   return state.volatile.answeredCorrectly
 }
 
+export const showUnansweredExitMessage = state => {
+  return state.options.showUnansweredExitMessage
+}
+
 export const resultsHistory = state => {
   const history = state.kanadb.map(function (kana) {
     const matchingResults = this.find(results => results.id === kana.id)

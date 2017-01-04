@@ -15,11 +15,11 @@ new Vue({
     window.onbeforeunload = this.leaving
   },
   computed: {
-    ...mapGetters(['hasAnswered'])
+    ...mapGetters(['hasAnswered', 'showUnansweredExitMessage'])
   },
   methods: {
     leaving: function () {
-      if (!this.hasAnswered) {
+      if (!this.hasAnswered && this.showUnansweredExitMessage) {
         return 'Enter an answer'
       }
     }

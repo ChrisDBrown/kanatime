@@ -13,6 +13,14 @@ const mutations = {
   [types.USER_HAS_ANSWERED] (state) {
     state.volatile.hasAnswered = true
   },
+  [types.RESET_VOLATILE_DATA] (state) {
+    state.volatile = {
+      currentKana: false,
+      currentResults: false,
+      hasAnswered: false,
+      answeredCorrectly: false
+    }
+  },
   [types.USER_ANSWERED_CORRECTLY] (state) {
     state.volatile.answeredCorrectly = true
   },
@@ -38,6 +46,12 @@ const mutations = {
   [types.DECREMENT_KANA_SKIPPED_COUNT] (state, kana) {
     const index = state.results.findIndex(resultsForKana, kana)
     state.results[index].skipped--
+  },
+  [types.UPDATE_UNANSWERED_EXIT_MESSAGE_OPTION] (state) {
+    state.options.showUnansweredExitMessage = !state.options.showUnansweredExitMessage
+  },
+  [types.UPDATE_ACTIVE_KANA_TYPES_OPTION] (state, value) {
+    state.options.activeKanaTypes = value
   }
 }
 

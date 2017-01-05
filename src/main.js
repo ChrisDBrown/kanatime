@@ -22,6 +22,7 @@ new Vue({
       if (!this.hasAnswered && this.showUnansweredExitMessage) {
         return 'Enter an answer'
       }
+      return null
     }
   }
 })

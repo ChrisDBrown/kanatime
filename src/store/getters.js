@@ -18,6 +18,10 @@ export const showUnansweredExitMessage = state => {
   return state.options.showUnansweredExitMessage
 }
 
+export const activeKanaTypes = state => {
+  return state.options.activeKanaTypes
+}
+
 export const resultsHistory = state => {
   const history = state.kanadb.map(function (kana) {
     const matchingResults = this.find(results => results.id === kana.id)

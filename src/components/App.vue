@@ -6,14 +6,14 @@
       <h3 class="romanji">
         <span v-if="hasAnswered">{{ randomKana.romanji }}</span>
       </h3>
-      <input class="answer" type="text" placeholder="Answer" tabindex="1" v-if="!hasAnswered" v-on:keyup.enter="submitAnswer($event)">
+      <input class="answer" type="text" placeholder="Answer" tabindex="1" v-if="!hasAnswered" v-on:keyup.enter="submitAnswer($event.target.value)">
       <historicKanaResults></historicKanaResults>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import HistoricKanaResults from './HistoricKanaResults.vue'
 import CurrentAnswerResult from './CurrentAnswerResult.vue'
 
@@ -23,9 +23,7 @@ export default {
     ...mapGetters(['randomKana', 'hasAnswered', 'answeredCorrectly'])
   },
   methods: {
-    submitAnswer: function ($event) {
-      this.$store.dispatch('submitAnswer', $event.target.value)
-    }
+    ...mapActions(['submitAnswer'])
   }
 }
 </script>

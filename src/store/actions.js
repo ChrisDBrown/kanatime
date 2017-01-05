@@ -1,10 +1,36 @@
 import * as types from './mutation_types'
 
+function getResultWeight (result) {
+  return (5 * result.success) + result.skipped + result.failure
+}
+
+function kanaForResult (kana) {
+  return kana.id === this.id
+}
+
 export const setCurrentKana = ({ commit, state }) => {
-  let kana = state.kanadb[Math.floor(Math.random() * state.kanadb.length)]
-  while (!state.options.activeKanaTypes.includes(kana.type)) {
-    kana = state.kanadb[Math.floor(Math.random() * state.kanadb.length)]
-  }
+  let lowestWeightResultGroup = []
+  let lowestWeight = Infinity
+
+  state.results.forEach(result => {
+    const resultWeight = getResultWeight(result)
+
+    if (resultWeight <= lowestWeight) {
+      const kana = state.kanadb.find(kanaForResult, result)
+
+      if (state.options.activeKanaTypes.includes(kana.type)) {
+        if (resultWeight < lowestWeight) {
+          lowestWeightResultGroup = [result]
+          lowestWeight = resultWeight
+        } else {
+          lowestWeightResultGroup.push(result)
+        }
+      }
+    }
+  })
+
+  const result = lowestWeightResultGroup[Math.floor(Math.random() * lowestWeightResultGroup.length)]
+  const kana = state.kanadb.find(kanaForResult, result)
 
   commit(types.SET_CURRENT_RANDOM_KANA, kana)
   commit(types.INCREMENT_KANA_SHOWN_COUNT, kana)

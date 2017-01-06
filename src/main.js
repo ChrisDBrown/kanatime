@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import App from './components/App.vue'
 import store from './store/'
+import router from './router'
 import { mapGetters } from 'vuex'
 
 new Vue({
   el: '#app',
   store,
+  router,
   components: { App },
   render: h => h(App),
   beforeCreate: function () {

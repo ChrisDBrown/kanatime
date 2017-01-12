@@ -15,25 +15,20 @@
   }
 </script>
 
-<style>
-  .mark {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 0 5px 0;
-    margin: 0;
-    color: white;
-    font-size: 50px;
-    font-weight: 100;
-    height: 50px;
-  }
+<style lang="scss">
+  @import '../assets/variables.scss';
 
   .tick {
+    font-size: 43px;
+    font-weight: 100;
+    margin: 0;
     color: #6FFFE9;
   }
-
   .cross {
+    font-size: 45px;
+    font-weight: 100;
+    margin: 0;
     color: #D7263D;
   }
+
 </style>

@@ -25,30 +25,35 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+  @import '../assets/variables.scss';
+
   .results {
     display: flex;
+    flex: 1;
     flex-direction: row;
-    text-align: center;
-    color: #57727C;
-    font-size: 30px;
-    font-weight: 500;
-    padding: 5px;
-    border: none;
-    background-color: #EEF3F5;
-    height: 70px;
-  }
+    justify-content: space-around;
+    background-color: $white;
+    border-radius: 0 0 6px 6px;
 
-  .score {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    padding: 5px;
-  }
+    .score {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $grey;
+      margin-top: 10px;
 
-  .score-title {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
+      .score-title {
+        display: flex;
+        flex: 1 0 0;
+        font-size: 20px;
+      }
+
+      .score-value {
+        display: flex;
+        flex: 2 0 0;
+        font-size: 35px;
+      }
+    }
   }
 </style>

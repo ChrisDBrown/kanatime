@@ -25,7 +25,14 @@ export const activeKanaTypes = state => {
 export const resultsHistory = state => {
   const history = state.kanadb.map(function (kana) {
     const matchingResults = this.find(results => results.id === kana.id)
+    let successPercentage = (matchingResults.success / matchingResults.shown) * 100
+    if (isNaN(successPercentage)) {
+      successPercentage = '-'
+    } else {
+      successPercentage = Math.round(successPercentage) + '%'
+    }
     kana.results = matchingResults
+    kana.successPercentage = successPercentage
     return kana
   }, state.results)
   return history

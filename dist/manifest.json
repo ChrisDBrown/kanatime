@@ -1,6 +1,6 @@
 {
   "name": "Kana Time",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 2,
   "description": "A quick kana quiz on every new tab.",
   "icons": {
@@ -8,8 +8,5 @@
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
-  },
-  "permissions": [
-    "tabs"
-  ]
+  }
 }
